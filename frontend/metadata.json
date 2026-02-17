@@ -1,0 +1,7 @@
+{
+  "name": "Skill-Link Marketplace",
+  "description": "A local services marketplace connecting seekers with verified providers using geolocation.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
