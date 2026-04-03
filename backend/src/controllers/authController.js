@@ -38,6 +38,8 @@ export const registerUser = async (req, res) => {
             email,
             password: hashedPassword,
             role: role || 'SEEKER',
+            verificationStatus: role === 'PROVIDER' ? 'PENDING' : 'NONE',
+            location: role === 'PROVIDER' ? { lat: 40.7128, lng: -74.0060, address: 'New York, NY' } : undefined,
             avatarUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`,
             availability: role === 'PROVIDER' ? [
                 { day: 'Mon', enabled: true, startTime: '09:00', endTime: '17:00' },

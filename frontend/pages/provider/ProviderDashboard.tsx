@@ -4,7 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { api } from '../../services/api';
 import { Booking, BookingStatus, Availability, PortfolioItem, User } from '../../types';
 import {
-    LayoutDashboard, Calendar as CalendarIcon, DollarSign, User as UserIcon,
+    LayoutDashboard, Calendar as CalendarIcon, IndianRupee, User as UserIcon,
     CheckCircle, XCircle, Clock, MapPin, MessageCircle, AlertTriangle,
     Plus, Trash2, Upload, Briefcase, Star, ChevronRight, Edit3, Save, Loader2, Image as ImageIcon,
     MoreHorizontal, Check, Settings
@@ -45,7 +45,7 @@ export const ProviderDashboard = () => {
                         <NavButton
                             active={activeTab === 'earnings'}
                             onClick={() => setActiveTab('earnings')}
-                            icon={<DollarSign size={18} />}
+                            icon={<IndianRupee size={18} />}
                             label="Earnings"
                         />
                         <NavButton
@@ -156,7 +156,7 @@ const OverviewTab = () => {
 
             {/* Stats Header */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <StatCard label="Total Earnings" value={`$${user?.totalEarnings || 0}`} icon={<DollarSign className="text-emerald-600" />} color="bg-emerald-50 border-emerald-100" />
+                <StatCard label="Total Earnings" value={`₹${user?.totalEarnings || 0}`} icon={<IndianRupee className="text-emerald-600" />} color="bg-emerald-50 border-emerald-100" />
                 <StatCard label="Active Jobs" value={active.length.toString()} icon={<Briefcase className="text-blue-600" />} color="bg-blue-50 border-blue-100" />
                 <StatCard label="Pending" value={pending.length.toString()} icon={<AlertTriangle className="text-amber-500" />} color="bg-amber-50 border-amber-100" />
                 <StatCard label="Rating" value="4.9" icon={<Star className="text-yellow-400 fill-current" />} color="bg-yellow-50 border-yellow-100" />
@@ -356,10 +356,10 @@ const EarningsTab = () => {
                 <div className="relative z-10 flex justify-between items-end">
                     <div>
                         <h2 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Total Lifetime Earnings</h2>
-                        <div className="text-5xl font-extrabold tracking-tight text-white">${user?.totalEarnings || 0}</div>
+                        <div className="text-5xl font-extrabold tracking-tight text-white">₹{user?.totalEarnings || 0}</div>
                     </div>
                     <div className="bg-emerald-500/10 border border-emerald-500/20 p-3 rounded-lg">
-                        <DollarSign className="text-emerald-500 h-8 w-8" />
+                        <IndianRupee className="text-emerald-500 h-8 w-8" />
                     </div>
                 </div>
                 <div className="mt-8 flex gap-4 text-sm">
@@ -369,7 +369,7 @@ const EarningsTab = () => {
                     </div>
                     <div className="bg-white/5 px-4 py-2 rounded-lg border border-white/5">
                         <span className="block text-xs text-slate-400 mb-0.5">Average / Job</span>
-                        <span className="font-bold">${(user?.totalEarnings && history.length) ? (user.totalEarnings / history.length).toFixed(0) : 0}</span>
+                        <span className="font-bold">₹{(user?.totalEarnings && history.length) ? (user.totalEarnings / history.length).toFixed(0) : 0}</span>
                     </div>
                 </div>
             </div>
@@ -408,7 +408,7 @@ const EarningsTab = () => {
                                             </span>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right font-bold">
-                                            +${job.price}
+                                            +₹{job.price}
                                         </td>
                                     </tr>
                                 ))
@@ -501,7 +501,7 @@ const ProfileTab = () => {
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-bold text-slate-700 mb-2">Hourly Rate ($)</label>
+                            <label className="block text-sm font-bold text-slate-700 mb-2">Hourly Rate (₹)</label>
                             <input
                                 type="number"
                                 name="hourlyRate"
@@ -653,7 +653,7 @@ const BookingCard: React.FC<{ booking: Booking, onAction: (id: string, status: B
                     </div>
                 </div>
                 <div className="text-right">
-                    <div className="font-extrabold text-slate-900 text-xl">${booking.price}</div>
+                    <div className="font-extrabold text-slate-900 text-xl">₹{booking.price}</div>
                     <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Estimated</div>
                 </div>
             </div>

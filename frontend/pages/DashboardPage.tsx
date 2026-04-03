@@ -38,7 +38,7 @@ const UnifiedDashboard = () => {
                 // Fetch all users
                 const users = await api.getUsers();
 
-                setPendingVerifications(users.filter(u => u.role === UserRole.PROVIDER && !u.isVerified && u.verificationStatus === 'PENDING'));
+                setPendingVerifications(users.filter(u => u.role === UserRole.PROVIDER && !u.isVerified));
                 setAllProviders(users.filter(u => u.role === UserRole.PROVIDER));
                 setAllSeekers(users.filter(u => u.role === UserRole.SEEKER));
             }
@@ -219,7 +219,7 @@ const UnifiedDashboard = () => {
                                                 </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500 font-medium">
-                                                ${provider.totalEarnings || 0}
+                                                ₹{provider.totalEarnings || 0}
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
                                                 {new Date(provider.createdAt).toLocaleDateString()}

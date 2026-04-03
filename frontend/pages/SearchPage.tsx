@@ -4,7 +4,7 @@ import { MapComponent } from '../components/MapComponent';
 import { api } from '../services/api';
 import { calculateDistance, DEFAULT_LOCATION } from '../services/geo';
 import { User, UserRole, Booking, BookingStatus, Availability, Message } from '../types';
-import { Search, Filter, Map as MapIcon, List, Star, Clock, DollarSign, Shield, CheckCircle, X, ArrowDownUp, ShieldCheck, MapPin, ChevronLeft, Briefcase, Image as ImageIcon, ArrowRight, AlertCircle, MessageSquare } from 'lucide-react';
+import { Search, Filter, Map as MapIcon, List, Star, Clock, IndianRupee, Shield, CheckCircle, X, ArrowDownUp, ShieldCheck, MapPin, ChevronLeft, Briefcase, Image as ImageIcon, ArrowRight, AlertCircle, MessageSquare } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 // Fallback constant for UI display if data is missing
@@ -23,7 +23,7 @@ export const SearchPage = () => {
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'map' | 'list'>('map');
   const [searchTerm, setSearchTerm] = useState('');
-  const [radius, setRadius] = useState(50); // Increased default
+  const [radius, setRadius] = useState(500); // Increased default to 500km for better visibility
   const [sortBy, setSortBy] = useState<'distance' | 'rating'>('distance');
   const [selectedProvider, setSelectedProvider] = useState<User | null>(null);
   const [showProfileView, setShowProfileView] = useState(false);
@@ -93,11 +93,13 @@ export const SearchPage = () => {
 
   const filteredProviders = useMemo(() => {
     return providers.filter(provider => {
-      // Distance Filter
+      // Distance Filter - Disabled for demo to show all providers regardless of location
+      /*
       if (provider.location) {
         const dist = calculateDistance(location, provider.location);
         if (dist > radius) return false;
       }
+      */
       // Text Filter
       if (searchTerm) {
         const term = searchTerm.toLowerCase();
@@ -325,7 +327,7 @@ export const SearchPage = () => {
 
                   <div className="mt-3 flex items-center justify-between pt-3 border-t border-gray-100">
                     <div>
-                      <span className="text-lg font-bold text-slate-900">${provider.hourlyRate}</span>
+                      <span className="text-lg font-bold text-slate-900">₹{provider.hourlyRate}</span>
                       <span className="text-xs text-slate-500 font-medium">/hr</span>
                     </div>
                     <span className="text-sm font-bold text-emerald-600 group-hover:underline">
@@ -386,7 +388,7 @@ export const SearchPage = () => {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 border-y border-gray-100 py-6">
                   <div className="text-center">
-                    <p className="text-2xl font-extrabold text-slate-900">${selectedProvider.hourlyRate}</p>
+                    <p className="text-2xl font-extrabold text-slate-900">₹{selectedProvider.hourlyRate}</p>
                     <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Hourly Rate</p>
                   </div>
                   <div className="text-center border-l border-gray-100">
@@ -503,7 +505,7 @@ export const SearchPage = () => {
               <div>
                 <h4 className="font-bold text-slate-900 text-lg">{selectedProvider.name}</h4>
                 <p className="text-sm text-slate-500">
-                  ${selectedProvider.hourlyRate}/hr
+                  ₹{selectedProvider.hourlyRate}/hr
                   {selectedProvider.location && ` • ${calculateDistance(location, selectedProvider.location)} km away`}
                 </p>
               </div>

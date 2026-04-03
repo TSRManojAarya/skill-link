@@ -1,0 +1,69 @@
+{
+  "location": {
+    "lat": 40.7128,
+    "lng": -74.006,
+    "address": "New York, NY"
+  },
+  "_id": "69bff988b41277fc03c54c12",
+  "name": "New Provider Test 99",
+  "email": "newprov_test99@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$VW6ZBy/pPkxBopRXVE2Q9Q$ZNrFGeGbBOK8YvEJ653uJ3C78g84tK2HmbFbBZRmWMk",
+  "role": "PROVIDER",
+  "avatarUrl": "https://ui-avatars.com/api/?name=New%20Provider%20Test%2099&background=random",
+  "skills": [],
+  "isVerified": false,
+  "verificationStatus": "PENDING",
+  "availability": [
+    {
+      "day": "Mon",
+      "enabled": true,
+      "startTime": "09:00",
+      "endTime": "17:00"
+    },
+    {
+      "day": "Tue",
+      "enabled": true,
+      "startTime": "09:00",
+      "endTime": "17:00"
+    },
+    {
+      "day": "Wed",
+      "enabled": true,
+      "startTime": "09:00",
+      "endTime": "17:00"
+    },
+    {
+      "day": "Thu",
+      "enabled": true,
+      "startTime": "09:00",
+      "endTime": "17:00"
+    },
+    {
+      "day": "Fri",
+      "enabled": true,
+      "startTime": "09:00",
+      "endTime": "17:00"
+    },
+    {
+      "day": "Sat",
+      "enabled": false,
+      "startTime": "10:00",
+      "endTime": "14:00"
+    },
+    {
+      "day": "Sun",
+      "enabled": false,
+      "startTime": "10:00",
+      "endTime": "14:00"
+    }
+  ],
+  "todayEarnings": 0,
+  "totalEarnings": 0,
+  "averageRating": 0,
+  "totalReviews": 0,
+  "savedProviderIds": [],
+  "portfolio": [],
+  "createdAt": "2026-03-22T14:15:36.278Z",
+  "updatedAt": "2026-03-22T14:15:36.278Z",
+  "__v": 0
+}

@@ -120,8 +120,8 @@ export const SeekerDashboard = () => {
                                 <CreditCard size={18} />
                                 <span className="text-xs font-bold uppercase tracking-wider">Total Spent</span>
                             </div>
-                            <p className="text-4xl font-extrabold tracking-tight mb-2">$450.00</p>
-                            <p className="text-xs text-emerald-400 font-medium">+12% from last month</p>
+                            <p className="text-4xl font-extrabold tracking-tight mb-2">₹{bookings.filter(b => b.status === 'COMPLETED').reduce((acc, curr) => acc + curr.price, 0).toLocaleString()}</p>
+                            <p className="text-xs text-emerald-400 font-medium">{bookings.filter(b => b.status === 'COMPLETED').length} settled payments</p>
                         </div>
                         <div className="absolute top-0 right-0 p-4 opacity-5">
                             <CreditCard size={120} />
@@ -141,7 +141,7 @@ export const SeekerDashboard = () => {
                             </div>
                         </div>
                         <div className="w-full bg-gray-100 h-1.5 rounded-full mt-4 overflow-hidden">
-                            <div className="bg-emerald-500 h-full rounded-full" style={{ width: '60%' }}></div>
+                            <div className="bg-emerald-500 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min(100, (bookings.filter(b => [BookingStatus.PENDING, BookingStatus.ACCEPTED, BookingStatus.IN_PROGRESS].includes(b.status)).length / 5) * 100)}%` }}></div>
                         </div>
                     </div>
 
@@ -288,7 +288,7 @@ const TrackerCard: React.FC<{ booking: Booking; provider?: User; onCancel: () =>
                     </div>
                     <div className="text-right">
                         <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Est. Total</p>
-                        <p className="font-extrabold text-slate-900 text-2xl">${booking.price}</p>
+                        <p className="font-extrabold text-slate-900 text-2xl">₹{booking.price}</p>
                     </div>
                 </div>
 
@@ -368,7 +368,7 @@ const HistoryCard: React.FC<{ booking: Booking; provider?: User; onRate?: () => 
                         ${booking.status === BookingStatus.COMPLETED ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}`}>
                         {booking.status}
                     </span>
-                    <p className="font-bold text-slate-900">${booking.price}</p>
+                    <p className="font-bold text-slate-900">₹{booking.price}</p>
                 </div>
                 {booking.status === BookingStatus.COMPLETED && onRate && (
                     <button

@@ -66,7 +66,7 @@ const importData = async () => {
                     lng: -74.0090
                 },
                 skills: ['Plumbing', 'Pipe Repair', 'Installation'],
-                hourlyRate: 80,
+                hourlyRate: 800,
                 serviceRadius: 20,
                 isVerified: true,
                 verificationStatus: 'APPROVED',
@@ -81,7 +81,7 @@ const importData = async () => {
                     { imageUrl: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&q=80&w=300', description: 'Bathroom Renovation' },
                     { imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=300', description: 'Kitchen Sink Fix' }
                 ],
-                totalEarnings: 1200
+                totalEarnings: 12000
             },
             // 4. Provider: Electrician
             {
@@ -97,7 +97,7 @@ const importData = async () => {
                     lng: -74.0020
                 },
                 skills: ['Electrical', 'Wiring', 'Lighting'],
-                hourlyRate: 95,
+                hourlyRate: 950,
                 serviceRadius: 25,
                 isVerified: true,
                 verificationStatus: 'APPROVED',
@@ -121,7 +121,7 @@ const importData = async () => {
                     lng: -73.9900
                 },
                 skills: ['Carpentry', 'Woodworking'],
-                hourlyRate: 70,
+                hourlyRate: 700,
                 serviceRadius: 15,
                 isVerified: false,
                 verificationStatus: 'PENDING'
@@ -143,7 +143,7 @@ const importData = async () => {
                     status: 'COMPLETED',
                     scheduledDate: new Date(Date.now() - 86400000 * 5), // 5 days ago
                     description: 'Fix leaking sink in kitchen',
-                    price: 160,
+                    price: 1600,
                     location: seeker.location?.address || 'Seeker Address'
                 },
                 {
@@ -152,7 +152,7 @@ const importData = async () => {
                     status: 'PENDING',
                     scheduledDate: new Date(Date.now() + 86400000 * 2), // in 2 days
                     description: 'Install new bathroom faucet',
-                    price: 80,
+                    price: 800,
                     location: seeker.location?.address || 'Seeker Address'
                 }
             ];

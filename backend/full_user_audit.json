@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "69c037e3c6698389cf302135",
+    "name": "boom ",
+    "email": "boom@gmail.com",
+    "role": "PROVIDER",
+    "isVerified": true,
+    "verificationStatus": "APPROVED",
+    "createdAt": "2026-03-22T18:41:39.402Z"
+  },
+  {
+    "_id": "69c03782c6698389cf300203",
+    "name": "manoj",
+    "email": "manoj@gmail.com",
+    "role": "SEEKER",
+    "isVerified": false,
+    "verificationStatus": "NONE",
+    "createdAt": "2026-03-22T18:40:02.258Z"
+  },
+  {
+    "_id": "69bff988b41277fc03c54c12",
+    "name": "New Provider Test 99",
+    "email": "newprov_test99@example.com",
+    "role": "PROVIDER",
+    "isVerified": false,
+    "verificationStatus": "PENDING",
+    "createdAt": "2026-03-22T14:15:36.278Z"
+  },
+  {
+    "_id": "69bff0588f3e872ba884071f",
+    "name": "Updated Name",
+    "email": "test_error_catcher@skill-link.example.com",
+    "role": "PROVIDER",
+    "isVerified": false,
+    "verificationStatus": "PENDING",
+    "createdAt": "2026-03-22T13:36:24.588Z"
+  },
+  {
+    "_id": "69bfe87851e1be15c164873f",
+    "name": "kavinnesh",
+    "email": "kavinnesh@gmail.com",
+    "role": "PROVIDER",
+    "isVerified": true,
+    "verificationStatus": "APPROVED",
+    "createdAt": "2026-03-22T13:02:48.503Z"
+  },
+  {
+    "_id": "69bfe2904f184fb5cecc9d7c",
+    "name": "Alice Electrician",
+    "email": "alice@example.com",
+    "role": "PROVIDER",
+    "isVerified": true,
+    "verificationStatus": "APPROVED",
+    "createdAt": "2026-03-22T12:37:36.751Z"
+  },
+  {
+    "_id": "69bfe2904f184fb5cecc9d7d",
+    "name": "Charlie Carpenter",
+    "email": "charlie@example.com",
+    "role": "PROVIDER",
+    "isVerified": true,
+    "verificationStatus": "APPROVED",
+    "createdAt": "2026-03-22T12:37:36.751Z"
+  },
+  {
+    "_id": "69bfe2904f184fb5cecc9d78",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "role": "SEEKER",
+    "isVerified": false,
+    "verificationStatus": "NONE",
+    "createdAt": "2026-03-22T12:37:36.750Z"
+  },
+  {
+    "_id": "69bfe2904f184fb5cecc9d79",
+    "name": "Bob The Plumber",
+    "email": "bob@example.com",
+    "role": "PROVIDER",
+    "isVerified": true,
+    "verificationStatus": "APPROVED",
+    "createdAt": "2026-03-22T12:37:36.750Z"
+  },
+  {
+    "_id": "69bfe2904f184fb5cecc9d77",
+    "name": "Admin User",
+    "email": "admin@skill-link.com",
+    "role": "ADMIN",
+    "isVerified": false,
+    "verificationStatus": "NONE",
+    "createdAt": "2026-03-22T12:37:36.748Z"
+  }
+]

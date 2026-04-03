@@ -1,0 +1,76 @@
+[
+  {
+    "location": {
+      "lat": 40.715,
+      "lng": -74.009,
+      "address": "456 Market St, New York, NY"
+    },
+    "_id": "69bfe2904f184fb5cecc9d79",
+    "name": "Bob The Plumber",
+    "email": "bob@example.com",
+    "isVerified": true,
+    "verificationStatus": "APPROVED"
+  },
+  {
+    "location": {
+      "lat": 40.72,
+      "lng": -74.002,
+      "address": "789 Broadway, New York, NY"
+    },
+    "_id": "69bfe2904f184fb5cecc9d7c",
+    "name": "Alice Electrician",
+    "email": "alice@example.com",
+    "isVerified": true,
+    "verificationStatus": "APPROVED"
+  },
+  {
+    "location": {
+      "lat": 40.74,
+      "lng": -73.99,
+      "address": "321 5th Ave, New York, NY"
+    },
+    "_id": "69bfe2904f184fb5cecc9d7d",
+    "name": "Charlie Carpenter",
+    "email": "charlie@example.com",
+    "isVerified": true,
+    "verificationStatus": "APPROVED"
+  },
+  {
+    "_id": "69bfe87851e1be15c164873f",
+    "name": "kavinnesh",
+    "email": "kavinnesh@gmail.com",
+    "isVerified": true,
+    "verificationStatus": "APPROVED"
+  },
+  {
+    "_id": "69bff0588f3e872ba884071f",
+    "name": "Updated Name",
+    "email": "test_error_catcher@skill-link.example.com",
+    "isVerified": false,
+    "verificationStatus": "PENDING"
+  },
+  {
+    "location": {
+      "lat": 40.7128,
+      "lng": -74.006,
+      "address": "New York, NY"
+    },
+    "_id": "69bff988b41277fc03c54c12",
+    "name": "New Provider Test 99",
+    "email": "newprov_test99@example.com",
+    "isVerified": false,
+    "verificationStatus": "PENDING"
+  },
+  {
+    "location": {
+      "lat": 40.7128,
+      "lng": -74.006,
+      "address": "New York, NY"
+    },
+    "_id": "69c037e3c6698389cf302135",
+    "name": "boom ",
+    "email": "boom@gmail.com",
+    "isVerified": true,
+    "verificationStatus": "APPROVED"
+  }
+]

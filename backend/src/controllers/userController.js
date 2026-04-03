@@ -51,8 +51,8 @@ export const updateUserProfile = async (req, res) => {
             res.status(404).json({ message: 'User not found' });
         }
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Server error' });
+        console.error("Profile update error:", error);
+        res.status(500).json({ message: 'Server error', error: error.message });
     }
 };
 
@@ -61,7 +61,7 @@ export const updateUserProfile = async (req, res) => {
 // @access  Public
 export const getProviders = async (req, res) => {
     try {
-        const providers = await User.find({ role: 'PROVIDER' }).select('-password');
+        const providers = await User.find({ role: 'PROVIDER', isVerified: true }).select('-password');
         res.json(providers);
     } catch (error) {
         console.error(error);

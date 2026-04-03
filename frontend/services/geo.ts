@@ -20,9 +20,9 @@ const deg2rad = (deg: number): number => {
   return deg * (Math.PI / 180);
 };
 
-// Default location (Chennai, Tamil Nadu) if permission denied
+// Default location (New York, NY) if permission denied
 export const DEFAULT_LOCATION: Location = {
-  lat: 13.0827,
-  lng: 80.2707,
-  address: 'Chennai, Tamil Nadu'
+  lat: 40.7128,
+  lng: -74.0060,
+  address: 'New York, NY'
 };

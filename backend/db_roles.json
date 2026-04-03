@@ -1,0 +1,58 @@
+[
+  {
+    "email": "newprov_test99@example.com",
+    "role": "PROVIDER",
+    "status": "PENDING",
+    "v": false,
+    "name": "New Provider Test 99"
+  },
+  {
+    "email": "test_error_catcher@skill-link.example.com",
+    "role": "PROVIDER",
+    "status": "NONE",
+    "v": false,
+    "name": "Updated Name"
+  },
+  {
+    "email": "kavinnesh@gmail.com",
+    "role": "PROVIDER",
+    "status": "NONE",
+    "v": false,
+    "name": "kavinnesh"
+  },
+  {
+    "email": "alice@example.com",
+    "role": "PROVIDER",
+    "status": "APPROVED",
+    "v": true,
+    "name": "Alice Electrician"
+  },
+  {
+    "email": "charlie@example.com",
+    "role": "PROVIDER",
+    "status": "APPROVED",
+    "v": true,
+    "name": "Charlie Carpenter"
+  },
+  {
+    "email": "john@example.com",
+    "role": "SEEKER",
+    "status": "NONE",
+    "v": false,
+    "name": "John Doe"
+  },
+  {
+    "email": "bob@example.com",
+    "role": "PROVIDER",
+    "status": "APPROVED",
+    "v": true,
+    "name": "Bob The Plumber"
+  },
+  {
+    "email": "admin@skill-link.com",
+    "role": "ADMIN",
+    "status": "NONE",
+    "v": false,
+    "name": "Admin User"
+  }
+]

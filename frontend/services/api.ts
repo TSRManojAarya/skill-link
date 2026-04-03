@@ -1,6 +1,6 @@
 import { User, Booking, Message, UserRole, BookingStatus } from '../types';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'http://localhost:5001/api';
 
 const getHeaders = () => {
     const user = localStorage.getItem('skill_link_current_user');
